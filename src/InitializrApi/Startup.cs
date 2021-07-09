@@ -70,7 +70,7 @@ namespace Steeltoe.InitializrApi
             {
                 services.ConfigureConfigServerClientOptions(Configuration);
                 services.Configure<UiConfig>(Configuration);
-                services.AddSingleton<IUiConfigService, UiConfigService>();
+                services.AddTransient<IUiConfigService, UiConfigService>();
             }
             else
             {
